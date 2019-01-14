@@ -1,14 +1,18 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    
   </div>
 </template>
 
 <script>
+import Father from './components/Father.vue'
+
 export default {
-  name: 'App'
+  components:{
+      Father
+    },
 }
+
 </script>
 
 <style>
