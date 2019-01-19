@@ -1,27 +1,21 @@
 <template>
-  <div id="app">
-    
+  <div class="app">
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Father from './components/Father.vue'
 
 export default {
-  components:{
-      Father
-    },
-}
 
+}
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.app{
+  margin: 0rem;
+  padding: 0rem;
+  background-color: #F5F5F5;
 }
+
 </style>
