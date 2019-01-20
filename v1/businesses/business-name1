@@ -1,0 +1,262 @@
+{
+	"statu" : 200,
+	"data" : [{
+		"name" : "business-name1",
+		"img-path" : "/img/business-name1.jpg",
+		"details" : {
+			"transport" : 2,
+			"time":30,
+			"gratuity"：5,
+			"notice" : "欢迎光临，用餐高峰期请提前下单，谢谢"
+		},
+		"commodities" :[{
+			"name" : "热销榜",
+			"details" : [{
+				"name" : "干拌面",
+				"img-path" : "/img/noodles1.jpg",
+				"monthly-sales" :180,
+				"Praise ratio" : 4.7,
+				"unit-price" : 25,
+				"label" : ["1212","4送1"]
+			},{
+				"name" : "意大利面",
+				"img-path" : "/img/noodles2.jpg",
+				"monthly-sales" :200,
+				"Praise ratio" : 4.5,
+				"unit-price" : 30,
+				"label" : ["1212","4送1"]
+			},{
+				"name" : "清蒸鲈鱼",
+				"img-path" : "/img/fishes1.jpg",
+				"monthly-sales" :150,
+				"Praise ratio" : 4.0,
+				"unit-price" : 88,
+				"label" : ["1212","4送1"]
+			},{
+				"name" : "牛肉炒饭",
+				"img-path" : "/img/friedRice1.jpg",
+				"monthly-sales" :268,
+				"Praise ratio" : 4.5,
+				"unit-price" : 35,
+				"label" : ["1212","4送1","1111","折扣"]
+			},{
+				"name" : "皮蛋瘦肉粥",
+				"img-path" : "/img/gruel1.jpg",
+				"monthly-sales" :300,
+				"Praise ratio" : 4.8,
+				"unit-price" : 15,
+				"label" : ["1212","4送1"]
+			}]
+		},{
+			"name" : "面条",
+			"details" : [{
+				"name" : "干拌面",
+				"img-path" : "/img/noodles1.jpg",
+				"monthly-sales" :180,
+				"Praise ratio" : 4.7,
+				"unit-price" : 25,
+				"label" : ["1212"]
+			},{
+				"name" : "意大利面",
+				"img-path" : "/img/noodles2.jpg",
+				"monthly-sales" :200,
+				"Praise ratio" : 4.5,
+				"unit-price" : 30,
+				"label" : ["1212"]
+			},{
+				"name" : "牛肉汤面",
+				"img-path" : "/img/noodles3.jpg",
+				"monthly-sales" :30,
+				"Praise ratio" : 4.0,
+				"unit-price" : 32,
+				"label" : ["1212"]
+			},{
+				"name" : "肉末刀削面",
+				"img-path" : "/img/noodles4.jpg",
+				"monthly-sales" :80,
+				"Praise ratio" : 4.5,
+				"unit-price" : 25,
+				"label" : ["1212"]
+			},{
+				"name" : "肉末汤面",
+				"img-path" : "/img/noodles5.jpg",
+				"monthly-sales" :50,
+				"Praise ratio" : 4.8,
+				"unit-price" : 25,
+				"label" : ["1212"]
+			}]
+		},{
+			"name" : "家常菜",
+			"details" : [{
+				"name" : "东坡肉",
+				"img-path" : "/img/cookedFood1.jpg",
+				"monthly-sales" :50,
+				"Praise ratio" : 4.7,
+				"unit-price" : 45,
+				"label" : ["1212"]
+			},{
+				"name" : "芥菜炒肉丁",
+				"img-path" : "/img/cookedFood2.jpg",
+				"monthly-sales" :50,
+				"Praise ratio" : 4.5,
+				"unit-price" : 40,
+				"label" : ["1212"]
+			},{
+				"name" : "大盘鸡",
+				"img-path" : "/img/cookedFood3.jpg",
+				"monthly-sales" :30,
+				"Praise ratio" : 4.0,
+				"unit-price" : 108,
+				"label" : ["1212"]
+			},{
+				"name" : "炒时蔬",
+				"img-path" : "/img/cookedFood4.jpg",
+				"monthly-sales" :79,
+				"Praise ratio" : 4.5,
+				"unit-price" : 35,
+				"label" : ["1212"]
+			},{
+				"name" : "鱼香肉丝",
+				"img-path" : "/img/cookedFood5.jpg",
+				"monthly-sales" :80,
+				"Praise ratio" : 3.9,
+				"unit-price" : 55,
+				"label" : ["1212"]
+			}]
+		},{
+			"name" : "鱼",
+			"details" : [{
+				"name" : "清蒸鲈鱼",
+				"img-path" : "/img/fishes1.jpg",
+				"monthly-sales" :150,
+				"Praise ratio" : 4.0,
+				"unit-price" : 88,
+				"label" : ["1212"]
+			},{
+				"name" : "蒸鳕鱼",
+				"img-path" : "/img/fishes2.jpg",
+				"monthly-sales" :30,
+				"Praise ratio" : 3.5,
+				"unit-price" : 68,
+				"label" : ["1212","折扣"]
+			},{
+				"name" : "炸春鱼",
+				"img-path" : "/img/fishes3.jpg",
+				"monthly-sales" :50,
+				"Praise ratio" : 4.0,
+				"unit-price" : 50,
+				"label" : ["1212"]
+			},{
+				"name" : "炸鱼块",
+				"img-path" : "/img/fishes4.jpg",
+				"monthly-sales" :10,
+				"Praise ratio" : 3.5,
+				"unit-price" : 35,
+				"label" : ["1212"]
+			},{
+				"name" : "烤鱼",
+				"img-path" : "/img/fishes5.jpg",
+				"monthly-sales" :60,
+				"Praise ratio" : 4.2,
+				"unit-price" : 128,
+				"label" : ["1212"]
+			}]
+		},{
+			"name" : "炒饭、粥",
+			"details" : [{
+				"name" : "牛肉炒饭",
+				"img-path" : "/img/friedRice1.jpg",
+				"monthly-sales" :268,
+				"Praise ratio" : 4.5,
+				"unit-price" : 35,
+				"label" : ["1212","4送1","1111","折扣"]
+			},{
+				"name" : "肉末炒饭",
+				"img-path" : "/img/friedRice2.jpg",
+				"monthly-sales" :60,
+				"Praise ratio" : 4.3,
+				"unit-price" : 28,
+				"label" : ["1212"]
+			},{
+				"name" : "海鲜炒饭",
+				"img-path" : "/img/friedRice3.jpg",
+				"monthly-sales" :65,
+				"Praise ratio" : 4.0,
+				"unit-price" : 35,
+				"label" : ["1212"]
+			},{
+				"name" : "兰州炒饭",
+				"img-path" : "/img/friedRice5.jpg",
+				"monthly-sales" :60,
+				"Praise ratio" : 4.2,
+				"unit-price" : 28,
+				"label" : ["1212"]
+			},{
+				"name" : "石锅饭",
+				"img-path" : "/img/friedRice6.jpg",
+				"monthly-sales" :45,
+				"Praise ratio" : 3.9,
+				"unit-price" : 28,
+				"label" : ["1212"]
+			},{
+				"name" : "皮蛋瘦肉粥",
+				"img-path" : "/img/gruel1.jpg",
+				"monthly-sales" :300,
+				"Praise ratio" : 4.8,
+				"unit-price" : 15,
+				"label" : ["1212","4送1"]
+			},{
+				"name" : "艇仔粥",
+				"img-path" : "/img/gruel2.jpg",
+				"monthly-sales" :60,
+				"Praise ratio" : 3.9,
+				"unit-price" : 15,
+				"label" : ["1212"]
+			},{
+				"name" : "牛肉粥",
+				"img-path" : "/img/gruel4.jpg",
+				"monthly-sales" :25,
+				"Praise ratio" : 4.0,
+				"unit-price" : 20,
+				"label" : ["1212"]
+			},{
+				"name" : "猪肝粥",
+				"img-path" : "/img/gruel5.jpg",
+				"monthly-sales" :50,
+				"Praise ratio" : 4.0,
+				"unit-price" : 20,
+				"label" : ["1212"]
+			}]
+		},{
+			"name" : "甜品",
+			"details" : [{
+				"name" : "慕斯蛋糕",
+				"img-path" : "/img/desserts2.jpg",
+				"monthly-sales" :50,
+				"Praise ratio" : 4.0,
+				"unit-price" : 30,
+				"label" : ["1212"]
+			},{
+				"name" : "芒果坚果酸奶",
+				"img-path" : "/img/desserts3.jpg",
+				"monthly-sales" :30,
+				"Praise ratio" : 3.5,
+				"unit-price" : 35,
+				"label" : ["1212","折扣"]
+			},{
+				"name" : "糖水",
+				"img-path" : "/img/desserts4.jpg",
+				"monthly-sales" :50,
+				"Praise ratio" : 4.0,
+				"unit-price" : 25,
+				"label" : ["1212"]
+			}]
+		}]
+	}]
+}
+
+
+
+
+
+
