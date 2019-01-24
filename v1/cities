@@ -4,7 +4,7 @@
 		"default":{
 			"city":"深圳",
 			"address":"shenzhen"
-		}，
+		},
 		"cities":[{
 			"city":"北京",
 			"address":"beijing"
