@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Header message="密码登录"></Header>
+        <Header title="密码登录"></Header>
         <main>
             <form class="loginForm">
                 <div class="input_container">
@@ -34,7 +34,6 @@ export default {
             username:'',
             password:''           
         }
-
     },
     methods:{
         checkform:function(){
@@ -46,6 +45,7 @@ export default {
                 .catch(function (error) {alert("网络无法访问");});
         },
         checkResult:function(response){
+            console.log(response.data)
             if(response.data.statu === 200){
                 
                 //判断具体数据
