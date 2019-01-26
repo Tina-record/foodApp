@@ -4,7 +4,7 @@
         <Header logo=true title="首页" goBack=true></Header>
         <router-link to="/passwordLogin"></router-link>
         <article class="main">
-            <button @click="checkCities">获取城市数据</button>
+
             <section class="currentCity">
                 <h4 class="hotCity">当前城市</h4>
                 <div class="defaultCity">
@@ -15,7 +15,7 @@
             <section class="popularCity">
                 <h4>热门城市</h4>
                 <ul>
-                    <li v-for="cityArr in cities.slice(0,6)" v-bind:key="cityArr.city">{{cityArr.city}}</li>
+                    <li v-for="cityArr in cities" v-bind:key="cityArr.city">{{cityArr.city}}</li>
 
                 </ul>
             </section>
@@ -37,6 +37,9 @@ export default {
             defaultCity:'',
             cities:''      
         }
+    },
+    mounted(){
+        this.checkCities()
     },
     methods:{
         checkCities:function(){
@@ -62,18 +65,14 @@ export default {
             //判断数据当前网络状态
             if(response.data.statu === 200){
                 
-                console.log("suc")
-                
                 //获取当前城市数据
                 this.defaultCity = response.data.data.default.city;
-                // console.log(response.data.data.default.city)
 
                 //获取热门城市们数据
                 this.cities = response.data.data.cities;
-                console.log(this.cities)
 
             }else{
-            console.log("服务器出错");
+                alert("服务器出错");
             }
         }
     }
