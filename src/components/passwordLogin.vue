@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <section>
         <Header title="密码登录"></Header>
-        <main>
+        <section>
             <form class="loginForm">
                 <div class="input_container">
                     <input type="text" placeholder="账号" v-model="username"/>
@@ -15,10 +15,9 @@
                 <p class="loginParagraph">温馨提示：未注册过的账号，登录时将自动注册</p>
                 <p class="loginParagraph">注册过的用户可凭账号密码登录</p>
                 <button class="loginSubmit" v-on:click="checkform">登录</button>
-                
             </div>
-        </main>
-    </div>
+        </section>
+    </section>
 </template>
 
 <script>
