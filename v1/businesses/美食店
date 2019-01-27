@@ -1,0 +1,114 @@
+{
+	"statu": 200,
+	"data": [{
+		"name": "businessName2",
+		"imgPath": "./static/img/businessName2.jpg",
+		"details": {
+			"transport": 2,
+			"time": 30,
+			"gratuity": 5,
+			"notice": "欢迎光临，用餐高峰期请提前下单，谢谢"
+		},
+		"commodities": [{
+			"name": "热销榜",
+			"details": [{
+				"name": "干拌面",
+				"imgPath": "./static/img/noodles1.jpg",
+				"monthlySales": 180,
+				"praiseRatio": 4.7,
+				"unitPrice": 25,
+				"label": ["1212", "4送1"]
+			}, {
+				"name": "意大利面",
+				"imgPath": "./static/img/noodles2.jpg",
+				"monthlySales": 200,
+				"praiseRatio": 4.5,
+				"unitPrice": 30,
+				"label": ["1212", "4送1"]
+			}, {
+				"name": "清蒸鲈鱼",
+				"imgPath": "./static/img/fishes1.jpg",
+				"monthlySales": 150,
+				"praiseRatio": 4.0,
+				"unitPrice": 88,
+				"label": ["1212", "4送1"]
+			}]
+		}, {
+			"name": "面条",
+			"details": [{
+				"name": "干拌面",
+				"imgPath": "./static/img/noodles1.jpg",
+				"monthlySales": 180,
+				"praiseRatio": 4.7,
+				"unitPrice": 25,
+				"label": ["1212"]
+			}, {
+				"name": "意大利面",
+				"imgPath": "./static/img/noodles2.jpg",
+				"monthlySales": 200,
+				"praiseRatio": 4.5,
+				"unitPrice": 30,
+				"label": ["1212"]
+			}, {
+				"name": "牛肉汤面",
+				"imgPath": "./static/img/noodles3.jpg",
+				"monthlySales": 30,
+				"praiseRatio": 4.0,
+				"unitPrice": 32,
+				"label": ["1212"]
+			}, {
+				"name": "肉末刀削面",
+				"imgPath": "./static/img/noodles4.jpg",
+				"monthlySales": 80,
+				"praiseRatio": 4.5,
+				"unitPrice": 25,
+				"label": ["1212"]
+			}, {
+				"name": "肉末汤面",
+				"imgPath": "./static/img/noodles5.jpg",
+				"monthlySales": 50,
+				"praiseRatio": 4.8,
+				"unitPrice": 25,
+				"label": ["1212"]
+			}]
+		}, {
+			"name": "家常菜",
+			"details": [{
+				"name": "东坡肉",
+				"imgPath": "./static/img/cookedFood1.jpg",
+				"monthlySales": 50,
+				"praiseRatio": 4.7,
+				"unitPrice": 45,
+				"label": ["1212"]
+			}, {
+				"name": "芥菜炒肉丁",
+				"imgPath": "./static/img/cookedFood2.jpg",
+				"monthlySales": 50,
+				"praiseRatio": 4.5,
+				"unitPrice": 40,
+				"label": ["1212"]
+			}, {
+				"name": "大盘鸡",
+				"imgPath": "./static/img/cookedFood3.jpg",
+				"monthlySales": 30,
+				"praiseRatio": 4.0,
+				"unitPrice": 108,
+				"label": ["1212"]
+			}, {
+				"name": "炒时蔬",
+				"imgPath": "./static/img/cookedFood4.jpg",
+				"monthlySales": 79,
+				"praiseRatio": 4.5,
+				"unitPrice": 35,
+				"label": ["1212"]
+			}, {
+				"name": "鱼香肉丝",
+				"imgPath": "./static/img/cookedFood5.jpg",
+				"monthlySales": 80,
+				"praiseRatio": 3.9,
+				"unitPrice": 55,
+				"label": ["1212"]
+			}]
+		}]
+	}]
+}
