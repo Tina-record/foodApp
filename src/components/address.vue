@@ -1,6 +1,5 @@
 <template>
-    <div>
-        
+    <section>
         <Header logo=true title="首页" goBack=true></Header>
         <router-link to="/passwordLogin"></router-link>
         <article class="main">
@@ -20,7 +19,7 @@
                 </ul>
             </section>
         </article>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -33,14 +32,17 @@ export default {
     },
     data(){
         return{
-            //渲染变量（指拿到数据渲染HTML ）
+            //渲染变量（指数据 与HTML 之间的桥梁 ）
             defaultCity:'',
             cities:''      
         }
     },
+
+    //挂载后处理，然后传给渲染变量，由渲染变量传给HTML
     mounted(){
         this.checkCities()
     },
+    
     methods:{
         checkCities:function(){
             var cities = 'https://tina-record.github.io/foodApp/v1/cities'
