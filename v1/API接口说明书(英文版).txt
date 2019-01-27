@@ -1,0 +1,878 @@
+
+
+页面某个功能为动态效果，可能指背后可能存在大量数据结构。
+
+拿效果图二举例，商品分类每个图标都是相对独立动态功能。比如：甜品饮品，
+当点击“甜品饮品”，触发新的
+
+
+- 商家店铺界面
+
+翻译软件：
+
+
+# API接口定义规则
+
+## 城市展示
+- 调用方式:GET
+- 请求地址: /v1/cities
+- 格式一:
+```
+{
+	"statu" : 200,
+	"data" : {
+		"default":"深圳",
+		"cities":["北京","上海","广州","杭州","成都","重庆","张家口","哈尔滨"]
+	}
+}
+```
+
+格式二
+```
+{
+	"statu" : 200,
+	"data" : {
+		"default":{
+			"city":"深圳",
+			"address":"shenzhen"
+		},
+		"cities":[{
+			"city":"北京",
+			"address":"beijing"
+		},{
+			"city":"上海",
+			"address":"shanghai"
+		},{
+			"city":"广州",
+			"address":"guangzhou"
+		},{
+			"city":"杭州",
+			"address":"hangzhou"
+		},{
+			"city":"成都",
+			"address":"chengdu"
+		},{
+			"city":"重庆",
+			"address":"chongqing"
+		},{
+			"city":"张家口",
+			"address":"zhangjiakou"
+		},{
+			"city":"哈尔滨",
+			"address":"haerbin"
+		}]
+	}
+}
+```
+
+
+
+## 头部品种展示
+- 调用方式:GET
+- 请求地址: /v1/commodity/classify?city="深圳"
+classify 为接口名称
+city="shenzhen" 或 city="深圳" 为提供给服务器信息
+
+- 格式:
+```
+{
+	"statu" : 200,
+	"data" : [{
+			"name" : "dessert-drink",
+			"img-path" : "/img/201901071900.png"
+		},{
+			"name" : "convenient-store",
+			"img-path" : "/img/201901071901.png"
+		},{
+			"name" : "cate",
+			"img-path" : "/img/201901071902.png"
+		},{
+			"name" : "short-order",
+			"img-path" : "/img/201901071903.png"
+		},{
+			"name" : "preferential",
+			"img-path" : "/img/201901071904.png"
+		},{
+			"name" : "transport-fee",
+			"img-path" : "/img/201901071905.png"
+		},{
+			"name" : "teatime",
+			"img-path" : "/img/201901071906.png"
+		},{
+			"name" : "vegetables-fruit",
+			"img-path" : "/img/201901071907.png"
+		},{
+			"name" : "dessert",
+			"img-path" : "/img/201901071908.png"
+		},{
+			"name" : "soup",
+			"img-path" : "/img/201901071909.png"
+		},{
+			"name" : "flower",
+			"img-path" : "/img/201901071910.png"
+		},{
+			"name" : "Western-style-food",
+			"img-path" : "/img/201901071911.png"
+		},{
+			"name" : "snacks",
+			"img-path" : "/img/201901071912.png"
+		},{
+			"name" : "home-cooking",
+			"img-path" : "/img/201901071913.png"
+		},{
+			"name" : "culinary",
+			"img-path" : "/img/201901071914.png"
+		},{
+			"name" : "barbecue",
+			"img-path" : "/img/201901071915.png"
+		}
+	]
+}
+```
+		
+
+## 附近商家
+- 调用方式:GET
+- 请求地址: /v1/businesses/businessesShow?city="shenzhen"  
+- 格式:
+```
+{
+		"statu": 200,
+	"data": [{
+			"name": "五香俱全",
+			"logoPath": "./static/img/businessName1.jpg",
+			"details": {
+				"appointTransport": true,
+				"starClass": "4.7",
+				"designationPrice": "20.0",
+				"transportFee": "5",
+				"distance": "500",
+				"time": "30"
+			}
+		}, {
+			"name": "美食店",
+			"logoPath": "./static/img/businessName2.jpg",
+			"details": {
+				"appointTransport": true,
+				"starClass": "4.0",
+				"designationPrice": "15.0",
+				"transportFee": "5",
+				"distance": "1000",
+				"time": "50"
+			}
+		}, {
+			"name": "面食馆",
+			"logoPath": "./static/img/businessName3.jpg",
+			"details": {
+				"appointTransport": true,
+				"starClass": "3.7",
+				"designationPrice": "10.0",
+				"transportFee": "3",
+				"distance": "255",
+				"time": "20"
+			}
+		}, {
+			"name": "粥饭餐厅",
+			"logoPath": "./static/img/businessName4.jpg",
+			"details": {
+				"appointTransport": true,
+				"starClass": "4.2",
+				"designationPrice": "25.0",
+				"transportFee": "5",
+				"distance": "1500",
+				"time": "70"
+			}
+		}, {
+			"name": "任意点",
+			"logoPath": "./static/img/businessName5.jpg",
+			"details": {
+				"appointTransport": true,
+				"starClass": "4.0",
+				"designationPrice": "10.0",
+				"transportFee": "2",
+				"distance": "800",
+				"time": "40"
+			}
+		}, {
+			"name": "粤菜馆",
+			"logoPath": "./static/img/businessName6.jpg",
+			"details": {
+				"appointTransport": true,
+				"starClass": "3.8",
+				"designationPrice": "20.0",
+				"transportFee": "3",
+				"distance": "2200",
+				"time": "90"
+			}
+		}, {
+			"name": "川粤湘餐厅",
+			"logoPath": "./static/img/businessName7.jpg",
+			"details": {
+				"appointTransport": true,
+				"starClass": "3.5",
+				"designationPrice": "20.0",
+				"transportFee": "2",
+				"distance": "800",
+				"time": "40"
+			}
+		}, {
+			"name": "茶点",
+			"logoPath": "./static/img/businessName8.jpg",
+			"details": {
+				"appointTransport": true,
+				"starClass": "4.5",
+				"designationPrice": "20.0",
+				"transportFee": "3",
+				"distance": "600",
+				"time": "30"
+			}
+		}, {
+			"name": "舌尖美食",
+			"logoPath": "./static/img/businessName9.jpg",
+			"details": {
+				"appointTransport": true,
+				"starClass": "4.5",
+				"designationPrice": "20.0",
+				"transportFee": "5",
+				"distance": "1200",
+				"time": "55"
+			}
+		}, {
+			"name": "人间美味",
+			"logoPath": "./static/img/businessName10.jpg",
+			"details": {
+				"appointTransport": true,
+				"starClass": "4.7",
+				"designationPrice": "30.0",
+				"transportFee": "5",
+				"distance": "1800",
+				"time": "75"
+			}
+		}
+	]
+}
+```
+
+## 登录界面
+- 调用方式:post
+- 请求地址: /v1/登录?name="汉字、英文、邮箱"&password="大小写英文、特殊符号、数字"
+
+/v1/signIn?name="123"&password="456"
+
+
+- 格式:
+```
+{
+	"statu" : 200,
+	"data" : [{
+		"success" : true
+	}]
+}
+```
+
+
+
+
+## 商家效果演示
+- 调用方式：get
+- 请求地址：/v1/商家/店铺?city="深圳"&店铺名称="小二店"
+
+在工作中，正常显示（问号代表键值对，代表传给服务器的数据）：
+/v1/businesses/store?city="shenzhen"&store="business-name1"
+/v1/businesses/store?city="shenzhen"&store="business-name2"
+/v1/businesses/store?city="shenzhen"&store="business-name3"
+/v1/businesses/store?city="shenzhen"&store="business-name4"
+/v1/businesses/store?city="shenzhen"&store="business-name5" 未创建菜肴组件
+/v1/businesses/store?city="shenzhen"&store="business-name6" 未创建菜肴组件
+/v1/businesses/store?city="shenzhen"&store="business-name7" 未创建菜肴组件
+/v1/businesses/store?city="shenzhen"&store="business-name8" 未创建菜肴组件
+/v1/businesses/store?city="shenzhen"&store="business-name9" 未创建菜肴组件
+/v1/businesses/store?city="shenzhen"&store="business-name10" 未创建菜肴组件
+
+
+
+由于不会做后端技术，只能做静态数据库：
+/v1/businesses/business-name1
+/v1/businesses/business-name2
+/v1/businesses/business-name3
+/v1/businesses/business-name4
+
+- 特殊标注
+	- 配送类型(transport)
+		- 商家配送，有三种情况：
+			1是商家配送：
+			2是自行取餐；
+			3是饿了么送餐员配送；
+			
+- json 格式
+
+第一家店铺：
+```
+{
+	"statu": 200,
+	"data": [{
+		"name": "businessName1",
+		"imgPath": "./static/img/businessName1.jpg",
+		"details": {
+			"transport": 2,
+			"time": 30,
+			"gratuity": 5,
+			"notice": "欢迎光临，用餐高峰期请提前下单，谢谢"
+		},
+		"commodities": [{
+			"name": "热销榜",
+			"details": [{
+				"name": "干拌面",
+				"imgPath": "./static/img/noodles1.jpg",
+				"monthlySales": 180,
+				"praiseRatio": 4.7,
+				"unitPrice": 25,
+				"label": ["1212", "4送1"]
+			}, {
+				"name": "意大利面",
+				"imgPath": "./static/img/noodles2.jpg",
+				"monthlySales": 200,
+				"praiseRatio": 4.5,
+				"unitPrice": 30,
+				"label": ["1212", "4送1"]
+			}, {
+				"name": "清蒸鲈鱼",
+				"imgPath": "./static/img/fishes1.jpg",
+				"monthlySales": 150,
+				"praiseRatio": 4.0,
+				"unitPrice": 88,
+				"label": ["1212", "4送1"]
+			}, {
+				"name": "牛肉炒饭",
+				"imgPath": "./static/img/friedRice1.jpg",
+				"monthlySales": 268,
+				"praiseRatio": 4.5,
+				"unitPrice": 35,
+				"label": ["1212", "4送1", "1111", "折扣"]
+			}, {
+				"name": "皮蛋瘦肉粥",
+				"imgPath": "./static/img/gruel1.jpg",
+				"monthlySales": 300,
+				"praiseRatio": 4.8,
+				"unitPrice": 15,
+				"label": ["1212", "4送1"]
+			}]
+		}, {
+			"name": "面条",
+			"details": [{
+				"name": "干拌面",
+				"imgPath": "./static/img/noodles1.jpg",
+				"monthlySales": 180,
+				"praiseRatio": 4.7,
+				"unitPrice": 25,
+				"label": ["1212"]
+			}, {
+				"name": "意大利面",
+				"imgPath": "./static/img/noodles2.jpg",
+				"monthlySales": 200,
+				"praiseRatio": 4.5,
+				"unitPrice": 30,
+				"label": ["1212"]
+			}, {
+				"name": "牛肉汤面",
+				"imgPath": "./static/img/noodles3.jpg",
+				"monthlySales": 30,
+				"praiseRatio": 4.0,
+				"unitPrice": 32,
+				"label": ["1212"]
+			}, {
+				"name": "肉末刀削面",
+				"imgPath": "./static/img/noodles4.jpg",
+				"monthlySales": 80,
+				"praiseRatio": 4.5,
+				"unitPrice": 25,
+				"label": ["1212"]
+			}, {
+				"name": "肉末汤面",
+				"imgPath": "./static/img/noodles5.jpg",
+				"monthlySales": 50,
+				"praiseRatio": 4.8,
+				"unitPrice": 25,
+				"label": ["1212"]
+			}]
+		}, {
+			"name": "家常菜",
+			"details": [{
+				"name": "东坡肉",
+				"imgPath": "./static/img/cookedFood1.jpg",
+				"monthlySales": 50,
+				"praiseRatio": 4.7,
+				"unitPrice": 45,
+				"label": ["1212"]
+			}, {
+				"name": "芥菜炒肉丁",
+				"imgPath": "./static/img/cookedFood2.jpg",
+				"monthlySales": 50,
+				"praiseRatio": 4.5,
+				"unitPrice": 40,
+				"label": ["1212"]
+			}, {
+				"name": "大盘鸡",
+				"imgPath": "./static/img/cookedFood3.jpg",
+				"monthlySales": 30,
+				"praiseRatio": 4.0,
+				"unitPrice": 108,
+				"label": ["1212"]
+			}, {
+				"name": "炒时蔬",
+				"imgPath": "./static/img/cookedFood4.jpg",
+				"monthlySales": 79,
+				"praiseRatio": 4.5,
+				"unitPrice": 35,
+				"label": ["1212"]
+			}, {
+				"name": "鱼香肉丝",
+				"imgPath": "./static/img/cookedFood5.jpg",
+				"monthlySales": 80,
+				"praiseRatio": 3.9,
+				"unitPrice": 55,
+				"label": ["1212"]
+			}]
+		}, {
+			"name": "鱼",
+			"details": [{
+				"name": "清蒸鲈鱼",
+				"imgPath": "./static/img/fishes1.jpg",
+				"monthlySales": 150,
+				"praiseRatio": 4.0,
+				"unitPrice": 88,
+				"label": ["1212"]
+			}, {
+				"name": "蒸鳕鱼",
+				"imgPath": "./static/img/fishes2.jpg",
+				"monthlySales": 30,
+				"praiseRatio": 3.5,
+				"unitPrice": 68,
+				"label": ["1212", "折扣"]
+			}, {
+				"name": "炸春鱼",
+				"imgPath": "./static/img/fishes3.jpg",
+				"monthlySales": 50,
+				"praiseRatio": 4.0,
+				"unitPrice": 50,
+				"label": ["1212"]
+			}, {
+				"name": "炸鱼块",
+				"imgPath": "./static/img/fishes4.jpg",
+				"monthlySales": 10,
+				"praiseRatio": 3.5,
+				"unitPrice": 35,
+				"label": ["1212"]
+			}, {
+				"name": "烤鱼",
+				"imgPath": "./static/img/fishes5.jpg",
+				"monthlySales": 60,
+				"praiseRatio": 4.2,
+				"unitPrice": 128,
+				"label": ["1212"]
+			}]
+		}, {
+			"name": "炒饭、粥",
+			"details": [{
+				"name": "牛肉炒饭",
+				"imgPath": "./static/img/friedRice1.jpg",
+				"monthlySales": 268,
+				"praiseRatio": 4.5,
+				"unitPrice": 35,
+				"label": ["1212", "4送1", "1111", "折扣"]
+			}, {
+				"name": "肉末炒饭",
+				"imgPath": "./static/img/friedRice2.jpg",
+				"monthlySales": 60,
+				"praiseRatio": 4.3,
+				"unitPrice": 28,
+				"label": ["1212"]
+			}, {
+				"name": "海鲜炒饭",
+				"imgPath": "./static/img/friedRice3.jpg",
+				"monthlySales": 65,
+				"praiseRatio": 4.0,
+				"unitPrice": 35,
+				"label": ["1212"]
+			}, {
+				"name": "兰州炒饭",
+				"imgPath": "./static/img/friedRice5.jpg",
+				"monthlySales": 60,
+				"praiseRatio": 4.2,
+				"unitPrice": 28,
+				"label": ["1212"]
+			}, {
+				"name": "石锅饭",
+				"imgPath": "./static/img/friedRice6.jpg",
+				"monthlySales": 45,
+				"praiseRatio": 3.9,
+				"unitPrice": 28,
+				"label": ["1212"]
+			}, {
+				"name": "皮蛋瘦肉粥",
+				"imgPath": "./static/img/gruel1.jpg",
+				"monthlySales": 300,
+				"praiseRatio": 4.8,
+				"unitPrice": 15,
+				"label": ["1212", "4送1"]
+			}, {
+				"name": "艇仔粥",
+				"imgPath": "./static/img/gruel2.jpg",
+				"monthlySales": 60,
+				"praiseRatio": 3.9,
+				"unitPrice": 15,
+				"label": ["1212"]
+			}, {
+				"name": "牛肉粥",
+				"imgPath": "./static/img/gruel4.jpg",
+				"monthlySales": 25,
+				"praiseRatio": 4.0,
+				"unitPrice": 20,
+				"label": ["1212"]
+			}, {
+				"name": "猪肝粥",
+				"imgPath": "./static/img/gruel5.jpg",
+				"monthlySales": 50,
+				"praiseRatio": 4.0,
+				"unitPrice": 20,
+				"label": ["1212"]
+			}]
+		}, {
+			"name": "甜品",
+			"details": [{
+				"name": "慕斯蛋糕",
+				"imgPath": "./static/img/desserts2.jpg",
+				"monthlySales": 50,
+				"praiseRatio": 4.0,
+				"unitPrice": 30,
+				"label": ["1212"]
+			}, {
+				"name": "芒果坚果酸奶",
+				"imgPath": "./static/img/desserts3.jpg",
+				"monthlySales": 30,
+				"praiseRatio": 3.5,
+				"unitPrice": 35,
+				"label": ["1212", "折扣"]
+			}, {
+				"name": "糖水",
+				"imgPath": "./static/img/desserts4.jpg",
+				"monthlySales": 50,
+				"praiseRatio": 4.0,
+				"unitPrice": 25,
+				"label": ["1212"]
+			}]
+		}]
+	}]
+}
+```
+
+
+第二家餐厅店铺：
+```
+{
+	"statu": 200,
+	"data": [{
+		"name": "businessName2",
+		"imgPath": "./static/img/businessName2.jpg",
+		"details": {
+			"transport": 2,
+			"time": 30,
+			"gratuity": 5,
+			"notice": "欢迎光临，用餐高峰期请提前下单，谢谢"
+		},
+		"commodities": [{
+			"name": "热销榜",
+			"details": [{
+				"name": "干拌面",
+				"imgPath": "./static/img/noodles1.jpg",
+				"monthlySales": 180,
+				"praiseRatio": 4.7,
+				"unitPrice": 25,
+				"label": ["1212", "4送1"]
+			}, {
+				"name": "意大利面",
+				"imgPath": "./static/img/noodles2.jpg",
+				"monthlySales": 200,
+				"praiseRatio": 4.5,
+				"unitPrice": 30,
+				"label": ["1212", "4送1"]
+			}, {
+				"name": "清蒸鲈鱼",
+				"imgPath": "./static/img/fishes1.jpg",
+				"monthlySales": 150,
+				"praiseRatio": 4.0,
+				"unitPrice": 88,
+				"label": ["1212", "4送1"]
+			}]
+		}, {
+			"name": "面条",
+			"details": [{
+				"name": "干拌面",
+				"imgPath": "./static/img/noodles1.jpg",
+				"monthlySales": 180,
+				"praiseRatio": 4.7,
+				"unitPrice": 25,
+				"label": ["1212"]
+			}, {
+				"name": "意大利面",
+				"imgPath": "./static/img/noodles2.jpg",
+				"monthlySales": 200,
+				"praiseRatio": 4.5,
+				"unitPrice": 30,
+				"label": ["1212"]
+			}, {
+				"name": "牛肉汤面",
+				"imgPath": "./static/img/noodles3.jpg",
+				"monthlySales": 30,
+				"praiseRatio": 4.0,
+				"unitPrice": 32,
+				"label": ["1212"]
+			}, {
+				"name": "肉末刀削面",
+				"imgPath": "./static/img/noodles4.jpg",
+				"monthlySales": 80,
+				"praiseRatio": 4.5,
+				"unitPrice": 25,
+				"label": ["1212"]
+			}, {
+				"name": "肉末汤面",
+				"imgPath": "./static/img/noodles5.jpg",
+				"monthlySales": 50,
+				"praiseRatio": 4.8,
+				"unitPrice": 25,
+				"label": ["1212"]
+			}]
+		}, {
+			"name": "家常菜",
+			"details": [{
+				"name": "东坡肉",
+				"imgPath": "./static/img/cookedFood1.jpg",
+				"monthlySales": 50,
+				"praiseRatio": 4.7,
+				"unitPrice": 45,
+				"label": ["1212"]
+			}, {
+				"name": "芥菜炒肉丁",
+				"imgPath": "./static/img/cookedFood2.jpg",
+				"monthlySales": 50,
+				"praiseRatio": 4.5,
+				"unitPrice": 40,
+				"label": ["1212"]
+			}, {
+				"name": "大盘鸡",
+				"imgPath": "./static/img/cookedFood3.jpg",
+				"monthlySales": 30,
+				"praiseRatio": 4.0,
+				"unitPrice": 108,
+				"label": ["1212"]
+			}, {
+				"name": "炒时蔬",
+				"imgPath": "./static/img/cookedFood4.jpg",
+				"monthlySales": 79,
+				"praiseRatio": 4.5,
+				"unitPrice": 35,
+				"label": ["1212"]
+			}, {
+				"name": "鱼香肉丝",
+				"imgPath": "./static/img/cookedFood5.jpg",
+				"monthlySales": 80,
+				"praiseRatio": 3.9,
+				"unitPrice": 55,
+				"label": ["1212"]
+			}]
+		}]
+	}]
+}
+```
+
+
+第三家店铺：
+```
+{
+	"statu": 200,
+	"data": [{
+		"name": "businessName1",
+		"imgPath": "./static/img/businessName1.jpg",
+		"details": {
+			"transport": 2,
+			"time": 30,
+			"gratuity": 5,
+			"notice": "欢迎光临，用餐高峰期请提前下单，谢谢"
+		},
+		"commodities": [{
+			"name": "新菜式",
+			"details": [{
+				"name": "干拌面",
+				"imgPath": "./static/img/noodles1.jpg",
+				"monthlySales": 180,
+				"praiseRatio": 4.7,
+				"unitPrice": 25,
+				"label": ["1212", "4送1"]
+			}, {
+				"name": "意大利面",
+				"imgPath": "./static/img/noodles2.jpg",
+				"monthlySales": 200,
+				"praiseRatio": 4.5,
+				"unitPrice": 30,
+				"label": ["1212", "4送1"]
+			}]
+		}, {
+			"name": "炒饭、粥",
+			"details": [{
+				"name": "牛肉炒饭",
+				"imgPath": "./static/img/friedRice1.jpg",
+				"monthlySales": 268,
+				"praiseRatio": 4.5,
+				"unitPrice": 35,
+				"label": ["1212", "4送1", "1111", "折扣"]
+			}, {
+				"name": "肉末炒饭",
+				"imgPath": "./static/img/friedRice2.jpg",
+				"monthlySales": 60,
+				"praiseRatio": 4.3,
+				"unitPrice": 28,
+				"label": ["1212"]
+			}, {
+				"name": "海鲜炒饭",
+				"imgPath": "./static/img/friedRice3.jpg",
+				"monthlySales": 65,
+				"praiseRatio": 4.0,
+				"unitPrice": 35,
+				"label": ["1212"]
+			}, {
+				"name": "兰州炒饭",
+				"imgPath": "./static/img/friedRice5.jpg",
+				"monthlySales": 60,
+				"praiseRatio": 4.2,
+				"unitPrice": 28,
+				"label": ["1212"]
+			}, {
+				"name": "石锅饭",
+				"imgPath": "./static/img/friedRice6.jpg",
+				"monthlySales": 45,
+				"praiseRatio": 3.9,
+				"unitPrice": 28,
+				"label": ["1212"]
+			}, {
+				"name": "皮蛋瘦肉粥",
+				"imgPath": "./static/img/gruel1.jpg",
+				"monthlySales": 300,
+				"praiseRatio": 4.8,
+				"unitPrice": 15,
+				"label": ["1212", "4送1"]
+			}, {
+				"name": "艇仔粥",
+				"imgPath": "./static/img/gruel2.jpg",
+				"monthlySales": 60,
+				"praiseRatio": 3.9,
+				"unitPrice": 15,
+				"label": ["1212"]
+			}, {
+				"name": "牛肉粥",
+				"imgPath": "./static/img/gruel4.jpg",
+				"monthlySales": 25,
+				"praiseRatio": 4.0,
+				"unitPrice": 20,
+				"label": ["1212"]
+			}, {
+				"name": "猪肝粥",
+				"imgPath": "./static/img/gruel5.jpg",
+				"monthlySales": 50,
+				"praiseRatio": 4.0,
+				"unitPrice": 20,
+				"label": ["1212"]
+			}]
+		}, {
+			"name": "甜品",
+			"details": [{
+				"name": "慕斯蛋糕",
+				"imgPath": "./static/img/desserts2.jpg",
+				"monthlySales": 50,
+				"praiseRatio": 4.0,
+				"unitPrice": 30,
+				"label": ["1212"]
+			}, {
+				"name": "芒果坚果酸奶",
+				"imgPath": "./static/img/desserts3.jpg",
+				"monthlySales": 30,
+				"praiseRatio": 3.5,
+				"unitPrice": 35,
+				"label": ["1212", "折扣"]
+			}, {
+				"name": "糖水",
+				"imgPath": "./static/img/desserts4.jpg",
+				"monthlySales": 50,
+				"praiseRatio": 4.0,
+				"unitPrice": 25,
+				"label": ["1212"]
+			}]
+		}]
+	}]
+}
+```
+
+第四家店铺：
+```
+{
+	"statu": 200,
+	"data": [{
+		"name": "businessName1",
+		"imgPath": "./static/img/businessName1.jpg",
+		"details": {
+			"transport": 2,
+			"time": 30,
+			"gratuity": 5,
+			"notice": "欢迎光临，用餐高峰期请提前下单，谢谢"
+		},
+		"commodities": [{
+			"name": "粥",
+			"details": [{
+				"name": "艇仔粥",
+				"imgPath": "./static/img/gruel2.jpg",
+				"monthlySales": 60,
+				"praiseRatio": 3.9,
+				"unitPrice": 15,
+				"label": ["1212"]
+			}, {
+				"name": "牛肉粥",
+				"imgPath": "./static/img/gruel4.jpg",
+				"monthlySales": 25,
+				"praiseRatio": 4.0,
+				"unitPrice": 20,
+				"label": ["1212"]
+			}, {
+				"name": "猪肝粥",
+				"imgPath": "./static/img/gruel5.jpg",
+				"monthlySales": 50,
+				"praiseRatio": 4.0,
+				"unitPrice": 20,
+				"label": ["1212"]
+			}]
+		}, {
+			"name": "炒饭",
+			"details": [{
+				"name": "海鲜炒饭",
+				"imgPath": "./static/img/friedRice3.jpg",
+				"monthlySales": 65,
+				"praiseRatio": 4.0,
+				"unitPrice": 35,
+				"label": ["1212"]
+			}, {
+				"name": "兰州炒饭",
+				"imgPath": "./static/img/friedRice5.jpg",
+				"monthlySales": 60,
+				"praiseRatio": 4.2,
+				"unitPrice": 28,
+				"label": ["1212"]
+			}, {
+				"name": "石锅饭",
+				"imgPath": "./static/img/friedRice6.jpg",
+				"monthlySales": 45,
+				"praiseRatio": 3.9,
+				"unitPrice": 28,
+				"label": ["1212"]
+			}]
+		}]
+	}]
+}
+```

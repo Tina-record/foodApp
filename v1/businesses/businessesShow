@@ -1,8 +1,8 @@
 {
 	"statu": 200,
 	"data": [{
-			"name": "business-name1",
-			"logo-path": "/img/businessName1.jpg",
+			"name": "五香俱全",
+			"logoPath": "./static/img/businessName1.jpg",
 			"details": {
 				"appointTransport": true,
 				"starClass": "4.7",
@@ -12,8 +12,8 @@
 				"time": "30分钟"
 			}
 		}, {
-			"name": "business-name2",
-			"logo-path": "/img/businessName2.jpg",
+			"name": "美食店",
+			"logoPath": "./static/img/businessName2.jpg",
 			"details": {
 				"appointTransport": true,
 				"starClass": "4.0",
@@ -23,8 +23,8 @@
 				"time": "50分钟"
 			}
 		}, {
-			"name": "business-name3",
-			"logo-path": "/img/businessName3.jpg",
+			"name": "面食馆",
+			"logoPath": "./static/img/businessName3.jpg",
 			"details": {
 				"appointTransport": true,
 				"starClass": "3.7",
@@ -34,8 +34,8 @@
 				"time": "20分钟"
 			}
 		}, {
-			"name": "business-name4",
-			"logo-path": "/img/businessName4.jpg",
+			"name": "粥饭餐厅",
+			"logoPath": "./static/img/businessName4.jpg",
 			"details": {
 				"appointTransport": true,
 				"starClass": "4.2",
@@ -45,8 +45,8 @@
 				"time": "70分钟"
 			}
 		}, {
-			"name": "business-name5",
-			"logo-path": "/img/businessName5.jpg",
+			"name": "任意点",
+			"logoPath": "./static/img/businessName5.jpg",
 			"details": {
 				"appointTransport": true,
 				"starClass": "4.0",
@@ -56,8 +56,8 @@
 				"time": "40分钟"
 			}
 		}, {
-			"name": "business-name6",
-			"logo-path": "/img/businessName6.jpg",
+			"name": "粤菜馆",
+			"logoPath": "./static/img/businessName6.jpg",
 			"details": {
 				"appointTransport": true,
 				"starClass": "3.8",
@@ -67,8 +67,8 @@
 				"time": "90分钟"
 			}
 		}, {
-			"name": "business-name7",
-			"logo-path": "/img/businessName7.jpg",
+			"name": "川粤湘餐厅",
+			"logoPath": "./static/img/businessName7.jpg",
 			"details": {
 				"appointTransport": true,
 				"starClass": "3.5",
@@ -78,8 +78,8 @@
 				"time": "40分钟"
 			}
 		}, {
-			"name": "business-name8",
-			"logo-path": "/img/businessName8.jpg",
+			"name": "茶点",
+			"logoPath": "./static/img/businessName8.jpg",
 			"details": {
 				"appointTransport": true,
 				"starClass": "4.5",
@@ -89,8 +89,8 @@
 				"time": "30分钟"
 			}
 		}, {
-			"name": "business-name9",
-			"logo-path": "/img/businessName9.jpg",
+			"name": "舌尖美食",
+			"logoPath": "./static/img/businessName9.jpg",
 			"details": {
 				"appointTransport": true,
 				"starClass": "4.5",
@@ -100,8 +100,8 @@
 				"time": "55分钟"
 			}
 		}, {
-			"name": "business-name10",
-			"logo-path": "/img/logo/businessName10.jpg",
+			"name": "人间美味",
+			"logoPath": "./static/img/businessName10.jpg",
 			"details": {
 				"appointTransport": true,
 				"starClass": "4.7",

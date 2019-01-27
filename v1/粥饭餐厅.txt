@@ -1,0 +1,62 @@
+{
+	"statu": 200,
+	"data": [{
+		"name": "businessName1",
+		"imgPath": "./static/img/businessName1.jpg",
+		"details": {
+			"transport": 2,
+			"time": 30,
+			"gratuity": 5,
+			"notice": "欢迎光临，用餐高峰期请提前下单，谢谢"
+		},
+		"commodities": [{
+			"name": "粥",
+			"details": [{
+				"name": "艇仔粥",
+				"imgPath": "./static/img/gruel2.jpg",
+				"monthlySales": 60,
+				"praiseRatio": 3.9,
+				"unitPrice": 15,
+				"label": ["1212"]
+			}, {
+				"name": "牛肉粥",
+				"imgPath": "./static/img/gruel4.jpg",
+				"monthlySales": 25,
+				"praiseRatio": 4.0,
+				"unitPrice": 20,
+				"label": ["1212"]
+			}, {
+				"name": "猪肝粥",
+				"imgPath": "./static/img/gruel5.jpg",
+				"monthlySales": 50,
+				"praiseRatio": 4.0,
+				"unitPrice": 20,
+				"label": ["1212"]
+			}]
+		}, {
+			"name": "炒饭",
+			"details": [{
+				"name": "海鲜炒饭",
+				"imgPath": "./static/img/friedRice3.jpg",
+				"monthlySales": 65,
+				"praiseRatio": 4.0,
+				"unitPrice": 35,
+				"label": ["1212"]
+			}, {
+				"name": "兰州炒饭",
+				"imgPath": "./static/img/friedRice5.jpg",
+				"monthlySales": 60,
+				"praiseRatio": 4.2,
+				"unitPrice": 28,
+				"label": ["1212"]
+			}, {
+				"name": "石锅饭",
+				"imgPath": "./static/img/friedRice6.jpg",
+				"monthlySales": 45,
+				"praiseRatio": 3.9,
+				"unitPrice": 28,
+				"label": ["1212"]
+			}]
+		}]
+	}]
+}
