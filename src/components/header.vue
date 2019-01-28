@@ -1,14 +1,17 @@
 <template>
     <section class="header">
+        
         <p v-if="goBack">&lt;</p>
-        <p v-if="logo" class="headerParagraph">food</p>
+        <p v-if="logo" class="headerParagraph"></p>
         <p v-if="title" class="headerParagraph">{{title}}</p>
+        <p v-if="signln"></p>
+        
     </section>
 </template>
 
 <script>
 export default {
-    props:["title","goBack","logo"],
+    props:["title","goBack","logo","signln"],
 
     data(){
         return{

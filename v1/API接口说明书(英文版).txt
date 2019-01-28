@@ -78,56 +78,73 @@ city="shenzhen" 或 city="深圳" 为提供给服务器信息
 {
 	"statu" : 200,
 	"data" : [{
-			"name" : "dessert-drink",
-			"img-path" : "/img/201901071900.png"
+			"name":"甜品饮品",
+			"url" : "dessert-drink",
+			"imgPath" : "./static/img/201901071900.png"
 		},{
-			"name" : "convenient-store",
-			"img-path" : "/img/201901071901.png"
+			"name":"i超市便利",
+			"url" : "convenient-store",
+			"imgPath" : "./static/img/201901071901.png"
 		},{
-			"name" : "cate",
-			"img-path" : "/img/201901071902.png"
+			"name":"美食",
+			"url" : "cate",
+			"imgPath" : "./static/img/201901071902.png"
 		},{
-			"name" : "short-order",
-			"img-path" : "/img/201901071903.png"
+			"name":"快餐简餐",
+			"url" : "short-order",
+			"imgPath" : "./static/img/201901071903.png"
 		},{
-			"name" : "preferential",
-			"img-path" : "/img/201901071904.png"
+			"name":"新店优惠",
+			"url" : "preferential",
+			"imgPath" : "./static/img/201901071904.png"
 		},{
-			"name" : "transport-fee",
-			"img-path" : "/img/201901071905.png"
+			"name":"减免配送费",
+			"url" : "transport-fee",
+			"imgPath" : "./static/img/201901071905.png"
 		},{
-			"name" : "teatime",
-			"img-path" : "/img/201901071906.png"
+			"name":"下午茶",
+			"url" : "teatime",
+			"imgPath" : "./static/img/201901071906.png"
 		},{
-			"name" : "vegetables-fruit",
-			"img-path" : "/img/201901071907.png"
+			"name":"蔬菜水果",
+			"url" : "vegetables-fruit",
+			"imgPath" : "./static/img/201901071907.png"
 		},{
-			"name" : "dessert",
-			"img-path" : "/img/201901071908.png"
+			"name":"汤",
+			"url" : "dessert",
+			"imgPath" : "./static/img/201901071908.png"
 		},{
-			"name" : "soup",
-			"img-path" : "/img/201901071909.png"
+			"name":"鲜花",
+			"url" : "soup",
+			"imgPath" : "./static/img/201901071909.png"
 		},{
-			"name" : "flower",
-			"img-path" : "/img/201901071910.png"
+			"name":"西餐",
+			"url" : "flower",
+			"imgPath" : "./static/img/201901071910.png"
 		},{
-			"name" : "Western-style-food",
-			"img-path" : "/img/201901071911.png"
+			"name":"零食",
+			"url" : "Western-style-food",
+			"imgPath" : "./static/img/201901071911.png"
 		},{
-			"name" : "snacks",
-			"img-path" : "/img/201901071912.png"
+			"name":"家常菜",
+			"url" : "snacks",
+			"imgPath" : "./static/img/201901071912.png"
 		},{
-			"name" : "home-cooking",
-			"img-path" : "/img/201901071913.png"
+			"name":"异国料理",
+			"url" : "home-cooking",
+			"imgPath" : "./static/img/201901071913.png"
 		},{
-			"name" : "culinary",
-			"img-path" : "/img/201901071914.png"
+			"name":"烧烤",
+			"url" : "culinary",
+			"imgPath" : "./static/img/201901071914.png"
 		},{
-			"name" : "barbecue",
-			"img-path" : "/img/201901071915.png"
+			"name":"指定专送",
+			"url" : "barbecue",
+			"imgPath" : "./static./static/img/201901071915.png"
 		}
 	]
 }
+
 ```
 		
 
