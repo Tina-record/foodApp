@@ -63,7 +63,7 @@
 		},{
 			"name":"指定专送",
 			"url" : "barbecue",
-			"imgPath" : "./static./static/img/201901071915.png"
+			"imgPath" : "./static/img/201901071915.png"
 		}
 	]
 }

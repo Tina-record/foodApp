@@ -15,27 +15,27 @@
         </section>
 
         <section v-for= "near in m_nearByBusinesses" :key='near.name'>
-        <section class='businessBar'>
-            <img v-bind:src='near.logoPath' class='busLogo'/>
-            <section class='text'>
-            <article class='businessName'>{{near.name}}</article>
-            <!-- 星级
-            <starLevel level=near.details.starClass>
-            </starLevel>-->
-            <!-- 蜂鸟专送 -->
-            <!-- <Hummingbird transport = near.details.appointTransport></Hummingbird> -->
-            <h5>
-            <p><span>￥{{near.details.designationPrice}}起送/配送费约￥{{near.details.transportFee}}</span>
-            </p>
-            <p><span class='gray'>{{near.details.distance|currencydecimal}}公里 /</span>
-            <span class='eleColor'>{{near.details.time}}</span>
-            </p>
-            </h5>
+            <section class='businessBar'>
+                <img v-bind:src='near.logoPath' class='busLogo'/>
+                <section class='text'>
+                <article class='businessName'>{{near.name}}</article>
+                <!-- 星级
+                <starLevel level=near.details.starClass>
+                </starLevel>-->
+                <!-- 蜂鸟专送 -->
+                <!-- <Hummingbird transport = near.details.appointTransport></Hummingbird> -->
+                <h5>
+                <p><span>￥{{near.details.designationPrice}}起送/配送费约￥{{near.details.transportFee}}</span>
+                </p>
+                <p><span class='gray'>{{near.details.distance|currencydecimal}}公里 /</span>
+                <span class='eleColor'>{{near.details.time}}</span>
+                </p>
+                </h5>
+                </section>
             </section>
         </section>
-        </section>
-    </section>
-    <footer></footer>
+
+        <footer></footer>
 
     </section>
 </template>
@@ -147,7 +147,7 @@
     .busLogo{
     height:4rem;
     width:4rem;
-    flex:1;
+    //flex:1;
     }
 
 
