@@ -1,6 +1,6 @@
 <template>
     <section>
-        <Header logo=true title="首页" goBack=true></Header>
+        <Header  title="首页" goBack=true></Header>
         <router-link to="/passwordLogin"></router-link>
         <article class="main">
 
@@ -23,13 +23,17 @@
 </template>
 
 <script>
+//引用本项目已有组件
 import Header from './header'
 import axios from 'axios'
 
 export default {
+    //本项目已有组件定义(与import ... from '...'结合)
     components:{
         Header
     },
+
+    //数据定义
     data(){
         return{
             //渲染变量（指数据 与HTML 之间的桥梁 ）
@@ -43,10 +47,13 @@ export default {
         this.checkCities()
     },
     
+    //方法（或函数）定义
     methods:{
+        //创建新函数为了获取数据
         checkCities:function(){
             var cities = 'https://tina-record.github.io/foodApp/v1/cities'
 
+            //axios 库
             axios
                 .get(cities)  //输入地址
 

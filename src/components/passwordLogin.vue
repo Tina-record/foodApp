@@ -1,6 +1,6 @@
 <template>
     <section>
-        <Header title="密码登录"></Header>
+        <Header title="密码登录" goBack=ture></Header>
         <section>
             <form class="loginForm">
                 <div class="input_container">
@@ -37,7 +37,7 @@ export default {
     methods:{
         checkform:function(){
             var address = 'https://tina-record.github.io/foodApp/v1/signIn?'+'name=\"'+ this.username + '\"&password=\"'+ this.password +'\"'
-            console.log(address);
+
             axios
                 .get(address)
                 .then(response => (this.checkResult(response)))
