@@ -1,7 +1,7 @@
 <template>
     <section>
         <Header title="密码登录" goBack=ture></Header>
-        <section>
+        <section class="loginMain">
             <form class="loginForm">
                 <div class="input_container">
                     <input type="text" placeholder="账号" v-model="username"/>
@@ -64,6 +64,9 @@ export default {
 
 <style lang="less">
     
+    .loginMain{
+        padding-top:2rem;
+    }
 
     .loginForm{
         margin: 1rem 0 0;

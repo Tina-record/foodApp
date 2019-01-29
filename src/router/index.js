@@ -10,15 +10,17 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
+      path:'/',
+      component:address
+    },
+    {
       path: '/passwordLogin',
-      // component: Download
       component: passwordLogin
-      
     },{
       path:'/address',
       component:address
     },{
-      path:'/',
+      path:'/businesses/:cityName',
       component:businesses
     }
 

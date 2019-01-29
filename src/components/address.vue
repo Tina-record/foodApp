@@ -1,7 +1,6 @@
 <template>
     <section>
-        <Header  title="首页" goBack=true></Header>
-        <router-link to="/passwordLogin"></router-link>
+        <Header  title="首页" logo=true></Header>
         <article class="main">
 
             <section class="currentCity">
@@ -14,7 +13,8 @@
             <section class="popularCity">
                 <h4>热门城市</h4>
                 <ul>
-                    <li v-for="cityArr in cities" v-bind:key="cityArr.city">{{cityArr.city}}</li>
+                    <li v-for="cityArr in cities" v-bind:key="cityArr.city"
+                     @click="clickCity(cityArr.city)">{{cityArr.city}}</li>
 
                 </ul>
             </section>
@@ -83,6 +83,11 @@ export default {
             }else{
                 alert("服务器出错");
             }
+        },
+
+        //创建函数:给每个城市添加点击事件
+        clickCity:function(cityName){
+            this.$router.push({ path: `/businesses/${cityName}` })
         }
     }
 
@@ -94,7 +99,7 @@ export default {
 <style>
     .main{
         margin: 0;
-        padding: 0;
+        padding: 2.6rem 0 0;
         font-family: "Microsoft Yahei";
         font-size: 1rem;
     }
