@@ -1,7 +1,7 @@
 <template>
    <section>
    
-        <Header :title="this.city" goBack=true></Header>
+        <Header :title="this.city" goBack=true signln=true></Header>
         <section class="foodTypesContainer">
             <div class="swiperSlide">
                 <a class="pictureLink" v-for="classifyShowArr in classifyShow" v-bind:key="classifyShowArr.imgPath" >
@@ -57,6 +57,8 @@
         },
 
         mounted(){
+            this.city = this.$route.params.cityName;
+            // console.log(this.$route.params.cityName);
             this.checkData();
             this.GetNearbyBusinesses();
         },
@@ -111,31 +113,49 @@
 
 
 <style lang="less">
-    .swiperSlide{
-            display: flex;
-            align-content: center;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        .swiperSlide{
-            width: 100%;
-            display: flex;
-            flex-wrap:wrap;
-            margin: 0;
-            padding: 0;
-        }
+.foodTypesContainer{
+    padding-top:2.6rem; 
+}
+.swiperSlide{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap:wrap;
+    margin: 0;
+    padding: 0;
+}
 
 
-        .pictureLink{
-            width: 25%;
-            display: flex;
-            justify-content: space-between;
-            max-width: 35rem;
-            margin: 0;
-            padding: 0;
-        }
+.pictureLink{
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 35rem;
+    margin: 0;
+    padding: 0;
+}
+
+
+.pictureContainer{
+    width: 10rem;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.picture{
+    width: 3rem;
+    height: 3rem;
+    padding-bottom: 0.5rem;
+}
+.pictureTitle{
+    font:1rem "Microsoft YaHei";
+}
 
 
 .businessBar{
@@ -187,25 +207,4 @@
 
 }
 
-
-        .pictureContainer{
-            width: 10rem;
-            height: 6rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        .picture{
-            width: 3rem;
-            height: 3rem;
-            padding-bottom: 0.5rem;
-        }
-        .pictureTitle{
-
-            font:1rem "Microsoft YaHei";
-        }
 </style>
