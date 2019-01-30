@@ -8,20 +8,19 @@ import businesses from '@/components/businesses'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path:'/',
-      component:address
+  routes: [{
+      path: '/',
+      component: address
     },
     {
       path: '/passwordLogin',
       component: passwordLogin
-    },{
-      path:'/address',
-      component:address
-    },{
-      path:'/businesses/:cityName',
-      component:businesses
+    }, {
+      path: '/address',
+      component: address
+    }, {
+      path: '/businesses/:cityName',
+      component: businesses
     }
 
   ]
