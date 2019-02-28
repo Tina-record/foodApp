@@ -4,14 +4,16 @@ import Router from 'vue-router'
 import passwordLogin from '@/components/passwordLogin'
 import address from '@/components/address'
 import businesses from '@/components/businesses'
+import navigationBar from '@/components/navigationBar'
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [{
-      path: '/',
-      component: address
-    },
+  routes: [
+    // {
+    //   path: '/',
+    //   component: address
+    // },
     {
       path: '/passwordLogin',
       component: passwordLogin
@@ -21,6 +23,9 @@ export default new Router({
     }, {
       path: '/businesses/:cityName',
       component: businesses
+    }, {
+      path: '/',
+      component: navigationBar
     }
 
   ]
