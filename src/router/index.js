@@ -18,13 +18,13 @@ export default new Router({
       path: '/passwordLogin',
       component: passwordLogin
     }, {
-      path: '/address',
+      path: '/',
       component: address
     }, {
       path: '/businesses/:cityName',
       component: businesses
     }, {
-      path: '/',
+      path: '/navigationBar',
       component: navigationBar
     }
 
