@@ -38,7 +38,7 @@ export default {
   data() {
     return {
       //渲染变量（指数据 与HTML 之间的桥梁 ）
-      defaultCity: "",
+      defaultCity: "北京",
       cities: ""
     };
   },
@@ -85,7 +85,7 @@ export default {
       }
     },
 
-    //创建函数:给每个城市添加点击事件
+    //创建函数:添加点击城市事件跳转处理
     clickCity: function(cityName) {
       this.$router.push({ path: `/businesses/${cityName}` });
     }
@@ -104,19 +104,21 @@ export default {
 .current-city {
   display: flex;
   flex-direction: column;
-  padding: 0.8rem 0;
   background: #e4e4e4;
 
   .hot-city {
-    padding: 0.8rem;
+    margin: 0;
+    padding: 0.8rem 0;
   }
 
   .default-city {
+    margin: 0;
+    padding: 1rem 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-top: 1rem solid #e4e4e4;
-    border-bottom: 2rem solid #e4e4e4;
+    border-top: solid #e4e4e4;
+    border-bottom: solid #e4e4e4;
   }
 }
 

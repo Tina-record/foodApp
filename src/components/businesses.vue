@@ -2,7 +2,7 @@
    <section>
    
         <Header :title="this.city" goBack=true signln=true></Header>
-        <section class="foodTypesContainer">
+        <nav class="foodTypesContainer">
             <div class="swiperSlide">
                 <a class="pictureLink" v-for="classifyShowArr in classifyShow" v-bind:key="classifyShowArr.imgPath" >
                     <figure class="pictureContainer">
@@ -12,7 +12,7 @@
                 </a>
 
             </div>
-        </section>
+        </nav>
 
         <section v-for= "near in m_nearByBusinesses" :key='near.name'>
             <section class='businessBar'>
